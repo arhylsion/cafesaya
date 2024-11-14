@@ -1,0 +1,37 @@
+<?php
+include 'config.php';
+$id = $_GET['id'];
+$result = $conn->query("SELECT * FROM karyawan WHERE id = $id");
+$karyawan = $result->fetch_assoc();
+
+if (isset($_POST['update'])) {
+    $nik = $_POST['nik'];
+    $nama = $_POST['nama'];
+    $jabatan = $_POST['jabatan'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $conn->query("UPDATE karyawan SET nik='$nik', nama='$nama', jabatan='$jabatan', password='$password' WHERE id='$id'");
+    header("Location: karyawan.php");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Karyawan</title>
+</head>
+<body>
+    <h2>Edit Karyawan</h2>
+    <form action="edit_karyawan.php?id=<?= $id ?>" method="POST">
+        <input type="text" name="nik" value="<?= $karyawan['nik'] ?>" required>
+        <input type="text" name="nama" value="<?= $karyawan['nama'] ?>" required>
+        <select name="jabatan" required>
+            <option value="admin" <?= $karyawan['jabatan'] == 'admin' ? 'selected' : '' ?>>Admin</option>
+            <option value="kasir" <?= $karyawan['jabatan'] == 'kasir' ? 'selected' : '' ?>>Kasir</option>
+            <option value="koki" <?= $karyawan['jabatan'] == 'koki' ? 'selected' : '' ?>>Koki</option>
+        </select>
+        <input type="password" name="password" placeholder="Update Password" required>
+        <button type="submit" name="update">Update</button>
+    </form>
+</body>
+</html>
