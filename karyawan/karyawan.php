@@ -60,6 +60,7 @@ if (!isset($_SESSION['username'])) {
     <table class="table table-bordered">
         <thead class="thead-dark">
             <tr>
+                <th>Foto</th>
                 <th>NIK</th>
                 <th>Nama</th>
                 <th>Jabatan</th>
@@ -73,10 +74,11 @@ if (!isset($_SESSION['username'])) {
 
             while($row = $result->fetch_assoc()) {
                 echo "<tr>
-                    <td>" . htmlspecialchars($row['nik']) . "</td>
-                    <td>" . htmlspecialchars($row['nama']) . "</td>
-                    <td>" . htmlspecialchars($row['jabatan']) . "</td>
-                    <td>" . htmlspecialchars($row['penjualan']) . "</td>
+                    <td><img src='" . ($row['foto']) . "' alt='Foto' width='50px' height='50px'></td>
+                    <td>" . ($row['nik']) . "</td>
+                    <td>" . ($row['nama']) . "</td>
+                    <td>" . ($row['jabatan']) . "</td>
+                    <td>" . ($row['penjualan']) . "</td>
                     <td>
                         <a href='edit_karyawan.php?nik=" . $row['nik'] . "' class='btn btn-warning btn-sm'>Edit</a>
                         <a href='hapus_karyawan.php?nik=" . $row['nik'] . "' class='btn btn-danger btn-sm' onclick=\"return confirm('Yakin ingin menghapus karyawan ini?')\">Hapus</a>

@@ -30,7 +30,7 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#0d5f41,#d8260b,#716106,#1fbbe2);
+    background: linear-gradient(0deg,transparent,transparent,#1c0d5f,#8d0bd8,#4b0a53,#320a49);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -43,7 +43,7 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#0d5f41,#d8260b,#716106,#1fbbe2);
+    background: linear-gradient(0deg,transparent,transparent,#3810c9,#8d0bd8,#080671,#a41fe2);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -63,7 +63,7 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#501871,#d7d410,#d7d410,#a309c2);
+    background: linear-gradient(0deg,transparent,transparent,#501871,#7710d7,#0b0464,#a309c2);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -77,7 +77,7 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#501871,#d7d410,#d7d410,#a309c2);
+    background: linear-gradient(0deg,transparent,transparent,#4d119b,#540ea3,#0e0d74,#a309c2);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;

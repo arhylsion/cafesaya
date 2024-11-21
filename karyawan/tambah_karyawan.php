@@ -53,8 +53,13 @@ if (!isset($_SESSION['username'])) {
 
 <div class="container mt-5">
     <h2 class="mb-4">Tambah Karyawan</h2>
-    
     <form action="proses_tambah.php" method="POST">
+
+    <div class="form-group">
+          <label for="foto">Upload Foto:</label>
+          <input type="file" name="foto" id="foto" accept="image/*" class="form-control" required>
+        </div>
+
         <div class="form-group">
             <label for="nik">NIK:</label>
             <input type="text" class="form-control" id="nik" name="nik" required>
@@ -79,6 +84,7 @@ if (!isset($_SESSION['username'])) {
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
         
+
         <!-- Tombol Tambah dan Batal -->
         <button type="submit" class="btn btn-primary">Tambah Karyawan</button>
         <a href="karyawan.php" class="btn btn-secondary ml-2">Batal</a>

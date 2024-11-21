@@ -23,14 +23,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="CSS/login.css">
+    <link rel="stylesheet" type="text/css" href="CSS\login.css">
 </head>
 <body>
 <div class="box">
         <span class="borderLine"></span>
         <form method="POST" action="">
             <div class="inputBox">
-                <h2>LOGIN</h2>
+                <h2>LOGIN CAFESAYA</h2>
+                <?php if (isset($error)): ?>
+            <p class="error"><?php echo htmlspecialchars($error); ?></p>
+            <?php endif; ?>
                 <input type="text" name="username" required="required">
                 <span>Username</span>
                 <i></i>
@@ -49,16 +52,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login Cafe Saya</h2>
-        <?php if (isset($error)): ?>
-            <p class="error"><?php echo htmlspecialchars($error); ?></p>
-        <?php endif; ?>
-        <form method="POST" action="">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login">
-        </form>
-    </div>
 </body>
 </html>
