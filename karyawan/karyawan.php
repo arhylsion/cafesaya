@@ -74,7 +74,7 @@ if (!isset($_SESSION['username'])) {
 
             while($row = $result->fetch_assoc()) {
                 echo "<tr>
-                    <td><img src='" . ($row['foto']) . "' alt='Foto' width='50px' height='50px'></td>
+                    <td><img src='uplods/<?=  ?>'  " . ($row['foto']) . "'width='50px' height='50px'></td>
                     <td>" . ($row['nik']) . "</td>
                     <td>" . ($row['nama']) . "</td>
                     <td>" . ($row['jabatan']) . "</td>
